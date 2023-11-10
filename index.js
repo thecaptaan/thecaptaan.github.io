@@ -52,12 +52,14 @@ function aboutScreen() {
                         in <u><i>Jaipur, Rajasthan</i></u>. I have a knack for full-stack development, and coding truly
                         fuels my
                         passion.
-                        Crafting practical solutions that make a positive impact is what I adore. Presently, I am
-                        dedicated
-                        to my role at <a class="external-link" target="_blank" rel="noopener"
-                            href="https://xorblin.com">xorblin.com</a>, where I
-                        contribute my skills to meaningful projects. I'm always on the
-                        lookout for fresh ideas to turn them into reality.</p>
+                       <p>
+                       Crafting practical solutions that make a positive impact is what I adore. Presently, I am
+                       dedicated
+                       to my role at <a class="external-link" target="_blank" rel="noopener"
+                           href="https://xorblin.com">xorblin.com</a>, where I
+                       contribute my skills to meaningful projects. I'm always on the
+                       lookout for fresh ideas to turn them into reality.
+                       </p>
                     </p>
                 </div>
                 <div class="skill-header">
@@ -187,7 +189,7 @@ function resumeScreen() {
   let resumeHtml = `
                 <div>
                     <div>
-                        <div>
+                        <div class="timeline-header">
                             <h2>Education</h2>
                         </div>
                         <ul class="timeline">
@@ -214,7 +216,9 @@ function resumeScreen() {
                         </ul>
                     </div>
                     <div>
-                        <h2>Experience</h2>
+                        <div class="timeline-header">
+                            <h2>Experience</h2>
+                        </div>
                         <div>
                             <ul class="timeline">
                                 <li class="timeline-item col">
@@ -275,11 +279,128 @@ function resumeScreen() {
 }
 function portfolioScreen() {
   screenHeader.innerHTML = `<h1>Portfolio</h1>`;
-  console.log("portfolioScreen is loaded");
+  let data = [
+    {
+      img: "./assets/images/template.jpg",
+      title: "Template Collection",
+      sub: "Web Development",
+      link: "",
+      description: "",
+    },
+    {
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Application Development",
+      link: "",
+      description: "",
+    },
+    {
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Open Source",
+      link: "",
+      description: "",
+    },
+    {
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Chrome Extension",
+      link: "",
+      description: "",
+    },
+    {
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Tools",
+      link: "",
+      description: "",
+    },
+    {
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Others",
+      link: "",
+      description: "",
+    },
+  ];
+  let portfolioHtml = `
+    <div class="portfolio-header">
+        <h2></h2>
+    </div>
+    <div class="portfolio-tags-container row">
+        <span class="portfolio-tag">All</span>
+        <span class="portfolio-tag">Web Development</span>
+        <span class="portfolio-tag">Application Development</span>
+        <span class="portfolio-tag">Tools</span>
+        <span class="portfolio-tag">Open Source</span>
+        <span class="portfolio-tag">Others</span>
+    </div>
+    <ul class="portfolio-container row">
+    ${data
+      .map((item) => {
+        return `
+    <li>
+        <div class="portfolio-card col">
+            <div class="portfolio-img-container">
+                <img class="portfolio-img" src="${item.img}" alt="">
+                <div class="portfolio-img-overlay">
+                    <img class="overlay-info" src="./assets/images/info.svg" alt="" />
+                </div>
+            </div>
+            <div class="portfolio-content col">
+                <span class="portfolio-content-header">${item.title}</span>
+                <span class="portfolio-content-subheader">${item.sub}</span>
+            </div>
+        </div>
+    </li>`;
+      })
+      .join("")} 
+  </ul>
+  `;
+  mainContent.innerHTML = portfolioHtml;
 }
 function blogScreen() {
   screenHeader.innerHTML = `<h1>Blogs</h1>`;
-  console.log("blogScreen is loaded");
+  let data = [
+    {
+        img: "./assets/images/coming-soon.jpg",
+        title: "Coming Soon",
+        sub: "Web Development",
+        link: "",
+        description: "",
+        },
+    ];
+  let blogHtml = `
+    <div class="blog-header">
+        <h2></h2>
+    </div>
+    <div class="blog-tags-container row">
+        <span class="blog-tag">All</span>
+        <span class="blog-tag">Web Development</span>
+        <span class="blog-tag">Application Development</span>
+        <span class="blog-tag">Tools</span>
+        <span class="blog-tag">Open Source</span>
+        <span class="blog-tag">Others</span>
+    </div>
+    <ul class="blog-container row">
+    ${data
+      .map((item) => {
+        return `<li>
+        <div class="blog-card col">
+            <div class="blog-img-container">
+                <img class="blog-img" src="${item.img}" alt="">
+                <div class="blog-img-overlay">
+                    <img class="overlay-info" src="./assets/images/info.svg" alt="" />
+                </div>
+            </div>
+            <div class="blog-content col">
+                <span class="blog-content-header">${item.title}</span>
+                <span class="blog-content-subheader">${item.sub}</span>
+            </div>
+        </div>
+    </li>
+    `}).join("")}`;
+    mainContent.innerHTML = blogHtml;
 }
 function contactScreen() {
   screenHeader.innerHTML = `<h1>Contact</h1>`;
