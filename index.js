@@ -52,6 +52,8 @@ function aboutScreen() {
                         in <u><i>Jaipur, Rajasthan</i></u>. I have a knack for full-stack development, and coding truly
                         fuels my
                         passion.
+                        <br />
+                        <br />
                        <p>
                        Crafting practical solutions that make a positive impact is what I adore. Presently, I am
                        dedicated
@@ -284,43 +286,43 @@ function portfolioScreen() {
       img: "./assets/images/template.jpg",
       title: "Template Collection",
       sub: "Web Development",
-      link: "",
-      description: "",
+      link: "https://github.com/thecaptaan?tab=repositories",
+      description: "A collection of templates for web development.",
     },
     {
       img: "./assets/images/coming-soon.jpg",
       title: "Coming Soon",
       sub: "Application Development",
-      link: "",
-      description: "",
+      link: "#",
+      description: "Coming Soon",
     },
     {
       img: "./assets/images/coming-soon.jpg",
       title: "Coming Soon",
       sub: "Open Source",
-      link: "",
-      description: "",
+      link: "#",
+      description: "Coming Soon",
     },
     {
       img: "./assets/images/coming-soon.jpg",
       title: "Coming Soon",
       sub: "Chrome Extension",
-      link: "",
-      description: "",
+      link: "#",
+      description: "Coming Soon",
     },
     {
       img: "./assets/images/coming-soon.jpg",
       title: "Coming Soon",
       sub: "Tools",
-      link: "",
-      description: "",
+      link: "#",
+      description: "Coming Soon",
     },
     {
       img: "./assets/images/coming-soon.jpg",
       title: "Coming Soon",
       sub: "Others",
-      link: "",
-      description: "",
+      link: "#",
+      description: "Coming Soon",
     },
   ];
   let portfolioHtml = `
@@ -343,8 +345,14 @@ function portfolioScreen() {
         <div class="portfolio-card col">
             <div class="portfolio-img-container">
                 <img class="portfolio-img" src="${item.img}" alt="">
-                <div class="portfolio-img-overlay">
-                    <img class="overlay-info" src="./assets/images/info.svg" alt="" />
+                <div class="portfolio-img-overlay col cent">
+                    <div class="portfolio-img-overlay-text">
+                        <span>${item.description}</span>
+                        <div class="portfolio-img-overlay-link row">
+                            <a href="${item.link}">Link <img src="./assets/images/external.png" width="15px" height="15px" alt="" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="portfolio-content col">
@@ -363,13 +371,13 @@ function blogScreen() {
   screenHeader.innerHTML = `<h1>Blogs</h1>`;
   let data = [
     {
-        img: "./assets/images/coming-soon.jpg",
-        title: "Coming Soon",
-        sub: "Web Development",
-        link: "",
-        description: "",
-        },
-    ];
+      img: "./assets/images/coming-soon.jpg",
+      title: "Coming Soon",
+      sub: "Web Development",
+      link: "",
+      description: "",
+    },
+  ];
   let blogHtml = `
     <div class="blog-header">
         <h2></h2>
@@ -389,8 +397,14 @@ function blogScreen() {
         <div class="blog-card col">
             <div class="blog-img-container">
                 <img class="blog-img" src="${item.img}" alt="">
-                <div class="blog-img-overlay">
-                    <img class="overlay-info" src="./assets/images/info.svg" alt="" />
+                <div class="blog-img-overlay col cent">
+                    <div class="blog-img-overlay-text">
+                        <span>${item.description}</span>
+                        <div class="blog-img-overlay-link row">
+                            <a href="${item.link}">Link <img src="./assets/images/external.png" width="15px" height="15px" alt="" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="blog-content col">
@@ -399,8 +413,10 @@ function blogScreen() {
             </div>
         </div>
     </li>
-    `}).join("")}`;
-    mainContent.innerHTML = blogHtml;
+    `;
+      })
+      .join("")}`;
+  mainContent.innerHTML = blogHtml;
 }
 function contactScreen() {
   screenHeader.innerHTML = `<h1>Contact</h1>`;
@@ -410,6 +426,24 @@ function contactScreen() {
       width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
       style="filter: invert(90%) hue-rotate(180deg)" title="Map of Bettiah, Bihar - Bharat"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>`;
+    </div>
+    
+    <div class="contact-container row">
+        <div class="contact-card col">
+            <div class="contact-card-header">
+                <span>Get in Touch</span>
+            </div>
+            <div class="contact-card-content">
+                <div class="contact-card-content-item row">
+                    <img src="./assets/images/email.png" width="20px" height="20px" alt="" />
+                    <span>
+                        <a href="mailto:
+                        " target="_blank">Email</a>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+                        `;
   mainContent.innerHTML = contactHtml;
 }
