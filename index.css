@@ -583,6 +583,7 @@ body::-webkit-scrollbar {
     backdrop-filter: blur(10px);
     transition: var(--transition-1);
 }
+
 .blog-img-overlay:hover,
 .portfolio-img-overlay:hover {
     animation: fadeIn 1s ease-in-out forwards;
@@ -613,6 +614,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
 }
+
 .blog-img-overlay-link a,
 .portfolio-img-overlay-link a {
     margin-right: 10px;
@@ -682,7 +684,13 @@ body::-webkit-scrollbar {
     object-fit: cover;
     border-radius: 10px;
 }
-
+.contact-card-container{
+    width: 100%;
+    justify-content: space-between;
+}
+.contact-card-container .aside-card{
+    width: fit-content;
+}
 @media screen and (max-width: 600px) {
     .mobile-active {
         height: fit-content;
@@ -806,11 +814,13 @@ body::-webkit-scrollbar {
     }
 
     /* Portfolio */
+    .blog-tags-container,
     .portfolio-tags-container {
         flex-wrap: wrap;
         justify-content: center;
     }
 
+    .blog-container,
     .portfolio-container {
         justify-content: center;
     }
@@ -818,5 +828,8 @@ body::-webkit-scrollbar {
     /* Contact */
     #map {
         height: 200px;
+    }
+    .contact-card-container{
+        flex-direction: column;
     }
 }
