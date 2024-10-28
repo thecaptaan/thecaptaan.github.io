@@ -1,0 +1,29 @@
+.offering__card {
+    width: 400px;
+    height: fit-content;
+}
+
+.offering__card__img__container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.offering__card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.offering__card__header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .offering__card {
+        width: 100%;
+    }
+}

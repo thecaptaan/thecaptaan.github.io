@@ -1,0 +1,254 @@
+.banner__images,
+.banner__container {
+    width: 100%;
+    height: calc(100vh - 120px);
+}
+
+.banner__container {
+    position: relative;
+}
+
+.banner__images {
+    z-index: 2;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.banner__img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: bottom center;
+}
+
+.banner__item {
+    width: 95%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.about {
+    margin: 100px 0;
+}
+
+.about__item {
+    width: 95%;
+}
+
+
+.about__content {
+    padding-top: 50px;
+}
+
+.about__content__item {
+    width: 50%;
+}
+
+.about__description {
+    width: 70%;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.about__img {
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.invest__text__container {
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid #ffcc00;
+}
+
+.invest__text {
+    rotate: 270deg;
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+
+.where__invest {
+    width: calc(100% - 400px);
+}
+
+.startup {
+    font-size: 18rem;
+    color: transparent;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.investment {
+    margin: 50px 0;
+}
+
+.offering {}
+
+.offering__heading,
+.investment__heading {
+    width: 95%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.investment__card__container {
+    width: 95%;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.offering__card__container {
+    width: 95%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.work {
+    width: 100%;
+    height: 300px;
+    color: #ffffff;
+    margin: 50px 0;
+    background-color: #00308F;
+}
+
+.work__item {
+    width: 95%;
+    align-items: center;
+}
+
+.work__img__container {
+    width: 40%;
+}
+
+.work__text {
+    width: 60%;
+}
+
+.work__heading {
+    font-size: 3rem;
+}
+
+.work__text__description {
+    color: gainsboro;
+    padding-top: 20px;
+    font-size: 1.3rem;
+}
+
+.work__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .banner__container {
+        height: 300px;
+    }
+
+    .banner__item {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .invest__text {
+        font-size: 3rem;
+        rotate: 0deg;
+    }
+
+    .where__invest {
+        width: 100%;
+        height: fit-content;
+        margin-top: -50px;
+    }
+
+    .startup {
+        margin-bottom: 50px;
+        font-size: 5rem;
+    }
+
+    .investment,
+    .offering,
+    .about {
+        margin: 50px 0;
+    }
+
+    .investment__heading,
+    .offering__heading {
+        padding: 0;
+    }
+
+    .investment__heading,
+    .offering__heading,
+    .about__heading {
+        padding-bottom: 30px;
+    }
+
+    .investment__heading span,
+    .offering__heading span,
+    .about__heading span {
+        display: block;
+    }
+
+    .about__content {
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    .about__content__item {
+        width: 100%;
+    }
+
+    .about__description {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .about__img {
+        width: 90%;
+        height: 300px;
+    }
+
+    .investment__card__container,
+    .offering__card__container {
+        flex-direction: column;
+    }
+
+    .work__item {
+        position: relative;
+    }
+
+    .work__text {
+        z-index: 2;
+        width: 100%;
+        position: absolute
+    }
+
+    .work__heading {
+        font-size: 2rem;
+    }
+
+    .work__text__description {
+        font-size: 1.2rem;
+    }
+
+    .work__img__container {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .work__img__container .work__img {
+        height: 400px;
+    }
+}

@@ -1,0 +1,43 @@
+.footer {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.footer__item {
+    width: 95%;
+    padding: 30px 30px;
+    background-color: #00308F;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.footer__label {
+    color: white;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.footer__link {
+    color: gainsboro;
+}
+
+.footer__icon {
+    color: #fff;
+    font-size: 22px;
+}
+
+.footer__icons {
+    gap: 25px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer__item {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

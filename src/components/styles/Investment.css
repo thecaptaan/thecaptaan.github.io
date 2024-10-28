@@ -1,0 +1,52 @@
+.investment__card {
+    width: 370px;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #00308F;
+}
+
+.investment__card__img__container {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.investment__card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+}
+
+.investment__card__content {
+    padding-top: 20px;
+}
+
+.investment__card__header {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.investment__card__description {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.investment__position__tag {
+    background-color: #fff;
+    padding: 3px;
+    color: #000;
+    display: inline-flex;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #00308F;
+}
+
+@media screen and (max-width: 768px) {
+    .investment__card {
+        width: 100%;
+    }
+}
